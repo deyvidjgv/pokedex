@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+#pokemon-info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+#pokemon-info img{
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+#pokemon-info img:hover{
+    box-shadow: 0px 2px  10px lightgreen;
+    scale: 1.1 ;
+    transition: box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;    
+    
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
