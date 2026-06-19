@@ -18,13 +18,25 @@ const loadPokemons = async () => {
 loadPokemons();
 
 const pokemonSelected = async (pokemonUrl) => {
+    const pokemonImage = document.getElementById("pokemon-image");
+    const pokemonName = document.getElementById("pokemon-name");
+    const pokemonStats = document.getElementById("pokemon-stats");
+    const pokemonAbilities = document.getElementById("pokemon-abilities");
+    const abilities = document.getElementById("abilities");
+
+    if (pokemonUrl === "") {
+        pokemonImage.src = "";
+        pokemonName.textContent = "";
+        pokemonStats.innerHTML = "";
+        pokemonAbilities.innerHTML = "";
+        abilities.textContent = "";
+        return;
+    }
+  
     try {
 
         const response = await fetch(pokemonUrl).then(response => response.json());
 
-        const pokemonImage = document.getElementById("pokemon-image");
-        const pokemonName = document.getElementById("pokemon-name");
-        const pokemonStats = document.getElementById("pokemon-stats");
         
 
         pokemonImage.src = response.sprites.front_default;
@@ -58,6 +70,7 @@ const pokemonSelected = async (pokemonUrl) => {
     } catch (error) {
         console.error("Error fetching pokemon details:", error);
     }
+    
 }
 // fetch(`${POKEAPI_URL}/pokemon`)
 // .then(response => response.json())
