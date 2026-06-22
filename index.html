@@ -12,19 +12,22 @@
         <div>
             <label for="pokemons">ELige tu Pokemón</label>
             <select id="pokemons" onchange="pokemonSelected(this.value)">
-            <option value="">Select a Pokemon</option>
-        </select>
+                <option value="">Select a Pokemon</option>
+            </select>
         </div>
 
         <div id="pokemon-info">
-            <h1 id="pokemon-name"></h1>   
-            <img id="pokemon-image">
-            
+            <h1 id="pokemon-name"></h1>
+            <div id="image-wrapper">
+                <img id="pokemon-image" alt="pokemon">
+            </div>
+            <div id="types-slot">
+                <div id="types" style="display:none;"></div>
+            </div>
             <ul id="pokemon-stats"></ul>
             <h2 id="abilities"></h2>
             <ul id="pokemon-abilities"></ul>
         </div>
-        <div id="types" style="display: none; padding: 10px">hola</div>
     </section>
 </body>
 </html>
